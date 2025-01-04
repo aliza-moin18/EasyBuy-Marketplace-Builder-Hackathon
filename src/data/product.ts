@@ -82,7 +82,7 @@ export const products: Product[] = [
     colors: ["Brown", "Beige"],
     description: "A luxurious and durable armchair for all types of interiors.",
     categories: ["Furniture", "Chairs", "Luxury"],
-    tags: [ "Comfortable"],
+    tags: ["Comfortable"],
     createdAt: "2023-03-01",
     isAvailable: true,
     ratingComments: ["Very sturdy and comfortable.", "Fits perfectly in my living room."]
@@ -130,7 +130,7 @@ export const products: Product[] = [
     colors: ["White", "Gray"],
     description: "A minimalist side table that fits perfectly in any contemporary setting.",
     categories: ["Furniture", "Tables", "Minimalist"],
-    tags: [ "Contemporary", "Chic"],
+    tags: ["Contemporary", "Chic"],
     createdAt: "2023-04-10",
     isAvailable: true,
     ratingComments: ["Great minimalist design.", "Perfect for small spaces."]
@@ -182,38 +182,5 @@ export const products: Product[] = [
     createdAt: "2023-06-01",
     isAvailable: true,
     ratingComments: ["Great for modern spaces.", "Very comfortable to sit on."]
-  },
-  {
-     id: 11,
-     name: "Sed at fermentum",
-     originalPrice: 96,
-     discountedPrice: 62,
-     image: "/products/pro11.png",
-     imageAlt: "Luxurious armchair",
-     rating: 4.0,
-     colors: ["Brown", "Beige"],
-     description: "A luxurious and durable armchair for all types of interiors.",
-     categories: ["Furniture", "Chairs", "Luxury"],
-     tags: [ "Comfortable"],
-     createdAt: "2023-03-01",
-     isAvailable: true,
-     ratingComments: ["Very sturdy and comfortable.", "Fits perfectly in my living room."]
-   },
-   {
-     id: 12,
-     name: "Fusce pellentesque at",
-     originalPrice: 96,
-     discountedPrice: 62,
-     image: "/products/pro12.png",
-     imageAlt: "Sleek office chair",
-     rating: 4.3,
-     colors: ["Black", "Gold"],
-     description: "A sleek and stylish office chair designed for comfort and productivity.",
-     categories: ["Furniture", "Chairs", "Office"],
-     tags: ["Sleek", "Comfortable"],
-     createdAt: "2023-03-10",
-     isAvailable: false,  
-     ratingComments: ["Comfortable for long work hours.", "Sleek and modern design."]
-   },
+  }
 ];
-

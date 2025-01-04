@@ -1,4 +1,4 @@
-import { products } from "../productData/page"; 
+import { products } from "@/data/product"; 
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineSearch } from "react-icons/ai";
