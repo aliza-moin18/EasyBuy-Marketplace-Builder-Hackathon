@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 
-function ProductCard({ image, title, price, discountPrice, id }) {
+function ProductCard({ image, title, price, discountPrice }) {
   return (
     <div className="group relative bg-white rounded-lg shadow-md overflow-hidden p-5 transition-transform transform group-hover:scale-105">
       

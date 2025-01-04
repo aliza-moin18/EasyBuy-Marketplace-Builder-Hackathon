@@ -1,27 +1,25 @@
-// Define the types for categories and tags to ensure strict control over possible values
+// product.ts (or types.ts)
 export type Category = "Furniture" | "Chairs" | "Tables" | "Living Room" | "Office" | "Luxury" | "Design" | "Decor" | "Dining" | "Sofas" | "Minimalist" | "Relaxation";
 export type Tag = "Modern" | "Comfortable" | "Stylish" | "Versatile" | "Designer" | "Sleek" | "Chic" | "Elegant" | "Contemporary" | "Family" | "Dining" | "Relax" | "Lounge";
 
-// Define the Product interface
 export interface Product {
   id: number;
   name: string;
   originalPrice: number;
   discountedPrice: number;
   image: string;
-  imageAlt: string;  // Image alt text for accessibility
-  imageSrcset?: string;  // Optional srcset for responsive image handling
-  rating?: number; // Optional rating
-  colors?: string[]; // Available colors
-  description?: string; // Description of the product
-  categories?: Category[]; // Specific product categories
-  tags?: Tag[]; // Tags related to the product
-  createdAt?: string;  // Date when the product was added
-  isAvailable: boolean;  // Availability status
-  ratingComments?: string[]; // Optional: User reviews/comments on the product
+  imageAlt: string;
+  imageSrcset?: string;
+  rating?: number;
+  colors?: string[];
+  description?: string;
+  categories?: Category[];
+  tags?: Tag[];
+  createdAt?: string;
+  isAvailable: boolean;
+  ratingComments?: string[];
 }
 
-// Sample product data
 export const products: Product[] = [
   {
     id: 1,
