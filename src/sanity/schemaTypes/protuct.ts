@@ -1,6 +1,7 @@
-import { Rule } from 'sanity';  // Import Rule type from Sanity
+import { Rule } from '@sanity/types'
 
-const productSchema = {
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
   name: 'product',
   type: 'document',
   title: 'Product',
@@ -64,6 +65,4 @@ const productSchema = {
       validation: (Rule: Rule) => Rule.required().error('Category is required'),
     },
   ],
-};
-
-export default productSchema; 
+}

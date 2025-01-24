@@ -1,8 +1,7 @@
 "use client";
 
-import { Button } from "./ui/button";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"; // Import icons
-import Image from "next/image"; // Import Image component
+import { Button } from "../ui/button";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"; 
 
 const Footer = () => {
   return (
@@ -14,8 +13,8 @@ const Footer = () => {
 
             {/* Subscribe Column */}
             <div className="lg:w-1/4 md:w-1/3 w-full">
-              <h1 className="title-font text-4xl font-bold text-black tracking-widest mb-7">
-                Hekto
+              <h1 className="title-font text-2xl font-bold text-black tracking-widest mb-7">
+                EasyBuy
               </h1>
 
               <div className="flex xl:flex-nowrap md:flex-wrap lg:flex-wrap justify-center md:justify-start">
@@ -26,7 +25,7 @@ const Footer = () => {
                   placeholder="Enter your email"
                   className="w-[240px] mt-1 bg-gray-100 rounded border-gray-300 focus:ring-2 focus:ring-indigo-200 py-2 px-3"
                 />
-                <Button className="mt-1 rounded-md text-white hover:bg-pink-600 transition-all duration-300">Subscribe</Button>
+                <Button className="mt-1 rounded-md text-white bg-pink-600 hover:bg-pink-700 transition-all duration-300">Subscribe</Button>
               </div>
 
               <div className="text-[#8A8FB9] hover:text-gray-500 mt-10">
@@ -85,24 +84,14 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="inline-flex space-x-4">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="text-blue-600 hover:text-blue-800 transition duration-300" size={30} />
+                <FaFacebook className="text-blue-700 hover:text-blue-800 transition duration-300" size={22} />
               </a>
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-blue-600 hover:text-blue-800 transition duration-300" size={30} />
+                <FaInstagram className="text-blue-700 hover:text-blue-800 transition duration-300" size={22} />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-blue-600 hover:text-blue-800 transition duration-300" size={30} />
+                <FaTwitter className="text-blue-700 hover:text-blue-800 transition duration-300" size={22} />
               </a>
-            </div>
-
-            {/* Footer Logo Image (Optional) */}
-            <div className="inline-flex space-x-4">
-              <Image 
-                src="/icon.jpg" 
-                alt="Hekto Logo" 
-                width={100} 
-                height={100} 
-              />
             </div>
           </div>
         </div>

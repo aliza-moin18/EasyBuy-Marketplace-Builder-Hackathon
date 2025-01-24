@@ -1,10 +1,10 @@
-import { createClient } from 'next-sanity'
+// lib/sanity.js
+import sanityClient from '@sanity/client';
 
-import { apiVersion, dataset, projectId } from '../env'
+const client = sanityClient({
+  projectId: 'dh190t1a', 
+  dataset: 'production', 
+  useCdn: true, 
+});
 
-export const client = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
-})
+export default client;

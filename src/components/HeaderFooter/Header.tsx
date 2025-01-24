@@ -1,11 +1,18 @@
-import React from 'react';
+"use client";
+
+import { useCart } from '@/context/CartContext'; 
+import Link from 'next/link';
 import { BiPhoneCall } from 'react-icons/bi';
-import { GoPerson } from 'react-icons/go';
 import { GrCart } from 'react-icons/gr';
+import { GoPerson } from 'react-icons/go';
 import { IoIosHeartEmpty } from 'react-icons/io';
 import { MdOutlineMailOutline } from 'react-icons/md';
 
 const Top = () => {
+  // Destructure necessary values from useCart context (cart items, total quantity, etc.)
+  const { cart } = useCart();
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0); // Calculate total items in cart
+
   return (
     <div className="bg-[#7E33E0] h-[44px] w-full flex items-center justify-between px-4 lg:px-12 text-white">
       
@@ -51,8 +58,21 @@ const Top = () => {
           <IoIosHeartEmpty className="text-xl" />
         </a>
 
-        {/* Cart */}
-        <GrCart className="text-xl" />
+        {/* Cart - With Dynamic Count */}
+        <Link href="/cart">
+         <div className="relative">
+         {/* Increase cart icon size */}
+            <GrCart className="text-2xl" />
+    
+         {/* Display badge if totalQuantity > 0 */}
+         {totalQuantity > 0 && (
+            <span className="absolute text-xs top-0 right-0 text-white bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
+            {totalQuantity}
+           </span>
+           )}
+       </div>
+     </Link>
+     
       </div>
     </div>
   );

@@ -1,13 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Image from "next/image";
 import ShopexOffer from "@/components/Shopex";
 import ProductFeature from "@/components/UniqueFeature";
 import FeaturedProducts from "@/components/FeatProduct";
 import Products from "@/components/LatestProd";
 import Latestblog from "@/components/LatestBlog";
-
+  
 export default function Home() {
   return (
     <>
@@ -32,7 +33,7 @@ export default function Home() {
                 className="mt-20 ml-20"
               />
             </div>
-          </div>
+          </div> 
 
       {/* Right Section */}
         <div className="w-full md:w-1/2 flex flex-col items-center text-center md:items-start md:text-left mt-6 md:mt-0 md:ml-[-280px]">
@@ -47,14 +48,16 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mt-4">
-              <Button className="text-white bg-pink-500 px-9 py-6 font-bold hover:bg-pink-600 transition-all duration-300">
+            <Link href="/login">
+               <Button className="text-white bg-pink-500 px-9 py-6 font-bold hover:bg-pink-600 transition-all duration-300">
                 Shop Now
-              </Button>
+               </Button>
+            </Link>
             </div>
-          </div>
+          </div> 
 
       {/* Hero Image */}
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-6 md:mt-0">
+         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-6 md:mt-0">
             <Image 
               src="/hero1.png" 
               alt="Hekto Product" 
@@ -79,8 +82,8 @@ export default function Home() {
         <Products />
         <ShopexOffer />
         <ProductFeature /> 
-        <Latestblog />
+        <Latestblog /> 
       </div>
-    </>
+    </> 
   );
 }

@@ -1,11 +1,38 @@
-import { products } from "@/data/product"; 
+"use client";
+
+import { useEffect, useState } from "react";
+import { products } from "@/data/product"; // Ensure correct import path for product data
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaEye, FaRegHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
+import { Product } from "@/data/product"; // Correctly import Product interface
 
 const ProductsPage = () => {
+  // State for wishlist with Product type
+  const [wishlist, setWishlist] = useState<Product[]>([]);
+
+  // Load wishlist from localStorage
+  useEffect(() => {
+    const savedWishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+    setWishlist(savedWishlist);
+  }, []);
+
+  // Function to add or remove items from wishlist
+  const handleWishlistToggle = (product: Product) => {
+    let updatedWishlist: Product[];
+    if (wishlist.some((item) => item.id === product.id)) {
+      // Remove from wishlist if already present
+      updatedWishlist = wishlist.filter((item) => item.id !== product.id);
+    } else {
+      // Add to wishlist with full product details
+      updatedWishlist = [...wishlist, product];
+    }
+    setWishlist(updatedWishlist);
+    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       {/* Section Header */}
@@ -64,9 +91,14 @@ const ProductsPage = () => {
               </div>
               <div
                 aria-label="Add to wishlist"
-                className="w-8 h-8 bg-white text-red-600 rounded-full flex justify-center items-center shadow-md hover:bg-red-100 transition"
+                onClick={() => handleWishlistToggle(product)} 
+                className="w-8 h-8 bg-white text-red-600 rounded-full flex justify-center items-center shadow-md hover:bg-red-100 transition cursor-pointer"
               >
-                <FaRegHeart />
+                <FaRegHeart
+                  className={`${
+                    wishlist.some((item) => item.id === product.id) ? "text-red-600" : "text-gray-600"
+                  }`}
+                />
               </div>
               <div
                 aria-label="Quick view"

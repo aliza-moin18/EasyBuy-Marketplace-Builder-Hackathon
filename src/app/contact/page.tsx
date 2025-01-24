@@ -23,14 +23,12 @@ const ContactUs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-9 px-10 md:px-20">
         {/* Information About Us */}
         <div>
-          <h2 className="text-4xl font-bold mb-4 text-blue-950 mt-10">
+          <h2 className="text-3xl font-bold mb-4 text-blue-950 mt-10">
             Information About Us
           </h2>
           <p className="mr-0 md:mr-20">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+          At EasyBuy, we are dedicated to offering a premium shopping experience. We provide a variety of high-quality products across categories like electronics, home goods, and fashion. Our goal is to make shopping simple, seamless, and enjoyable for everyone.
+            
           </p>
           <div className="flex space-x-4 mt-8">
             <div className="w-5 h-5 rounded-full bg-blue-500"></div>
@@ -41,7 +39,7 @@ const ContactUs = () => {
 
         {/* Contact Way Section */}
         <div>
-          <h1 className="text-4xl font-bold mb-8 mt-9 text-blue-950">Contact Way</h1>
+          <h1 className="text-3xl font-bold mb-8 mt-9 text-blue-950">Contact Way</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-center">
               <div className="w-9 h-9 rounded-full bg-blue-500 mr-4"></div>
@@ -49,7 +47,7 @@ const ContactUs = () => {
                 <p className="text-lg font-bold text-gray-500">
                   Tel: 877-67-88-99
                 </p>
-                <p className="text-gray-500">E-Mail: shop@store.com</p>
+                <p className="text-gray-500">E-Mail: Easybuy@store.com</p>
               </div>
             </div>
             <div className="flex items-center">
@@ -84,10 +82,9 @@ const ContactUs = () => {
       {/* Get in Touch */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-10 md:px-20 mt-20">
         <div>
-          <h2 className="text-4xl font-bold mb-4 text-blue-950">Get in Touch</h2>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet saepe ad voluptatem, vero reiciendis
-            reprehenderit incidunt dolor autem, sint dolores quas fugit.
+          <h2 className="text-3xl font-bold mb-4 text-blue-950">Get in Touch</h2>
+          <p className="text-gray-600 mb-4">
+          Have any questions or need assistance? Our team is here to help! Whether its about our products or your order, feel free to get in touch with us, and we ll ensure you get the support you need.
           </p>
           <form>
             <div className="mb-4">
