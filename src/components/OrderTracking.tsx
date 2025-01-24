@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 interface OrderItem {
@@ -21,7 +21,7 @@ interface OrderDetails {
 
 const OrderTrackingPage = () => {
   const searchParams = useSearchParams();
-  const orderId = searchParams?.get("orderId"); 
+  const orderId = searchParams?.get("orderId");
 
   const [orderDetails, setOrderDetails] = useState<OrderDetails | null>(null);
 
@@ -101,4 +101,11 @@ const OrderTrackingPage = () => {
   );
 };
 
-export default OrderTrackingPage;
+// Wrap the component in Suspense when it uses async hooks like useSearchParams
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OrderTrackingPage />
+    </Suspense>
+  );
+}
