@@ -7,10 +7,10 @@ import Link from "next/link";
 
 // Define the type for the product object
 interface Product {
+  imageUrl: string;
   name: string;
   id: number;
   title: string;
-  image: string;
   originalPrice?: number;
   price: number;
 }
@@ -33,11 +33,16 @@ const WishlistPage = () => {
 
   // Helper function to safely format price
   const formatPrice = (price: string | number): string => {
+    // Check if price is undefined or null
+    if (price === undefined || price === null) {
+      return "0.00"; // Return default value if price is undefined or null
+    }
+
     const numericPrice = parseFloat(price.toString()); // Ensure it's a number
 
     // If price is not a valid number, return "0.00"
     if (isNaN(numericPrice)) {
-      return "0.00"; 
+      return "0.00";
     }
 
     return numericPrice.toFixed(2); // Return formatted price
@@ -59,7 +64,7 @@ const WishlistPage = () => {
               {/* Image Section */}
               <div className="flex justify-center items-center bg-gray-100 group-hover:bg-green-50 transition duration-300 h-44 w-full">
                 <Image
-                  src={product.image}
+                  src={product.imageUrl}
                   alt={product.title}
                   width={120}
                   height={120}
