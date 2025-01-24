@@ -5,7 +5,6 @@ import { RiSearchLine } from "react-icons/ri";
 import { Product, products } from '@/data/product';
 import Image from 'next/image';
 
-// Debounce function to delay search execution
 const useDebounce = (value: string, delay: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
@@ -23,11 +22,11 @@ const useDebounce = (value: string, delay: number) => {
 };
 
 const SearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState(""); // Search query state
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]); // Filtered product state
+  const [searchQuery, setSearchQuery] = useState(""); 
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]); 
 
   // Use debounced value to delay the search function
-  const debouncedQuery = useDebounce(searchQuery, 500); // Adjust delay as needed (500ms)
+  const debouncedQuery = useDebounce(searchQuery, 500); 
 
   // Handle search input change
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +47,7 @@ const SearchBar = () => {
       );
       setFilteredProducts(filtered);
     } else {
-      setFilteredProducts([]); // Reset to empty list when query is empty
+      setFilteredProducts([]); 
     }
   }, [debouncedQuery]);
 
@@ -56,13 +55,13 @@ const SearchBar = () => {
     <div className="relative w-full max-w-[400px] mx-auto">
     <input
       type="text"
-      placeholder="Search for products..."
-      className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-gray-400"
+        placeholder="Search..."
+        className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-[#FB2E86]"
       value={searchQuery}
         onChange={handleSearchChange}
       />
-      <div className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2">
-        <RiSearchLine className="text-[#FB2E86] text-2xl" />
+      <div className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-[#FB2E86] p-2">
+        <RiSearchLine className="text-white text-xl" />
       </div>
 
       {/* Search Results - Show on typing */}
