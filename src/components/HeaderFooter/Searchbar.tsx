@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { RiSearchLine } from "react-icons/ri";
 import { Product, products } from '@/data/product';

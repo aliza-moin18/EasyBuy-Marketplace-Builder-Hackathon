@@ -7,7 +7,7 @@ import Image from "next/image";
 import { sanityfetch } from "@/sanity/lib/fetch";
 import { ProductDetailQuery } from "@/sanity/lib/queries";
 import { IoIosArrowBack } from "react-icons/io";
-import { useCart } from "@/context/CartContext"; // Import useCart from your context
+import { useCart } from "@/context/CartContext";
 
 type Product = {
   id: string;
