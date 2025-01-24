@@ -1,4 +1,4 @@
-import { products } from "@/app/productData/page";
+import { products } from "@/data/product"; 
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { FaArrowRight, FaFacebook, FaInstagram, FaPinterest, FaRegHeart, FaTwitter } from "react-icons/fa";

@@ -4,14 +4,14 @@
 
 @layer base {
   body {
-    font-family: var(--font-lato), sans-serif;
+    font-family: 'Roboto', sans-serif; /* Roboto font apply */
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-merriweather), serif;
+    font-family: 'Open Sans', serif; /* Open Sans font apply */
   }
 
   p, a, span {
-    font-family: var(--font-lato), sans-serif;
+    font-family: 'Roboto', sans-serif; /* Roboto font apply */
   }
 }
